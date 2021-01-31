@@ -4,7 +4,7 @@ ENV GIT_SUBMODULE_STRATEGY=recursive
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update
-RUN apt-get install golang git
+RUN apt-get install -y golang git
 
 RUN mkdir $HOME/src \
   cd $HOME/src \
