@@ -6,10 +6,10 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update
 RUN apt-get install -y golang git
 
-RUN mkdir $HOME/src \
-  cd $HOME/src \
-  git clone https://github.com/gohugoio/hugo.git \
-  cd hugo \
+RUN mkdir $HOME/src &&\
+  cd $HOME/src &&\
+  git clone https://github.com/gohugoio/hugo.git &&\
+  cd hugo &&\
   go install --tags extended
 
 MAINTAINER mishrasunny174.tech
