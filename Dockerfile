@@ -25,3 +25,4 @@ RUN mkdir $HOME/src &&\
 
 RUN mkdir -p /src
 WORKDIR /src
+RUN hugo version
