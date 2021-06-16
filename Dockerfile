@@ -12,7 +12,7 @@ RUN mkdir $HOME/src &&\
   cd $HOME/src &&\
   git clone https://github.com/gohugoio/hugo.git &&\
   cd hugo &&\
-  go install --tags extended
+  CGO_ENABLED=1 go install --tags extended
 
 RUN mkdir -p /src
 WORKDIR /src
