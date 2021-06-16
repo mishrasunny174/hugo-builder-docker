@@ -1,5 +1,7 @@
 FROM ubuntu:latest
 
+LABEL authors=mail@mishrasunny174.tech
+
 ENV GIT_SUBMODULE_STRATEGY=recursive
 ENV DEBIAN_FRONTEND=noninteractive
 
@@ -12,6 +14,5 @@ RUN mkdir $HOME/src &&\
   cd hugo &&\
   go install --tags extended
 
-MAINTAINER mishrasunny174.tech
 RUN mkdir -p /src
 WORKDIR /src
