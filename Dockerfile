@@ -6,7 +6,7 @@ ENV GIT_SUBMODULE_STRATEGY=recursive
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update
-RUN apt-get install -y wget tar git
+RUN apt-get install -y wget tar git build-essential
 
 RUN mkdir /tmp/downloads
 RUN cd /tmp/downloads &&\
