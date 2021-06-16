@@ -21,5 +21,7 @@ RUN mkdir $HOME/src &&\
   cd hugo &&\
   CGO_ENABLED=1 go install --tags extended
 
+RUN export PATH=$PATH:/usr/local/go/bin
+
 RUN mkdir -p /src
 WORKDIR /src
